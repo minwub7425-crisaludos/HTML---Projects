@@ -1,0 +1,283 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Recursos Humanos</title>
+  <link rel="icon" href="https://c0.klipartz.com/pngpicture/457/158/gratis-png-silueta-de-personas-en-la-ilustracion-de-marco-redondo-recursos-humanos-computadora-iconos-organizacion-gestion-recursos-humanos-thumbnail.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: white;
+      display: flex;
+    }
+
+    /* Barra superior */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      background-color: #0E2A47;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Imagen dentro de la barra superior */
+    header .logo img {
+      height: 40px; /* Tamaño ajustado a la barra */
+      width: auto;
+      border-radius: 5px; /* opcional, para esquinas suaves */
+    }
+
+    header .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu-item {
+      position: relative;
+    }
+
+    .menu-item > a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #34495e;
+      top: 40px;
+      left: 0;
+      min-width: 200px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .menu-item:hover .submenu {
+      display: block;
+    }
+
+    .submenu a {
+      color: white;
+      padding: 10px;
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .submenu a:hover {
+      background-color: #3c597a;
+    }
+
+    /* Barra lateral */
+    aside {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 250px;
+      height: calc(100% - 60px);
+      background-color: rgba(68, 77, 77, 0.11);
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .sidebar-item {
+      margin-bottom: 10px;
+    }
+
+    .sidebar-title {
+      cursor: pointer;
+      padding: 10px;
+      background-color: transparent;
+      color: #0E2A47;
+      border: none;
+      text-align: left;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .sidebar-submenu {
+      display: none;
+      margin-left: 10px;
+    }
+
+    .sidebar-submenu a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+
+    .sidebar-submenu a:hover {
+      background-color: #3b4c5f;
+    }
+
+    /* Contenido principal */
+    main {
+      margin-left: 250px;
+      margin-top: 80px;
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="./assets/img/logonuevaimagen.png" alt="Logo RH">
+      🔶 Dirección de Capital Humano
+    </div>
+    <nav class="menu">
+      <div class="menu-item">
+        <a href="#">Nosotros</a>
+        <div class="submenu">
+          <a href="nosotros.html">Nuestra Historia</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="#">Identidad Corporativa</a>
+        <div class="submenu">
+          <a href="valores.html">Nuestros Valores</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <a href="#">Principios Estratégicos</a>
+        <div class="submenu">
+          <a href="cultura.html">Somos Cultura</a>
+          <a href="somosgente.html">Somos Gente</a>
+          <a href="somoservicio.html">Somos Servicio</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <aside>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Atracción de Talento</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Reporte 1</a>
+        <a href="https://app.powerbi.com/">Reporte 2</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Estructura Organizacional</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Organigrama</a>
+        <a href="https://app.powerbi.com/">Áreas</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Onboarding y Capacitación</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Inducción</a>
+        <a href="https://app.powerbi.com/">Cursos</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Desarrollo Organizacional</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Evaluaciones</a>
+        <a href="https://app.powerbi.com/">Planes</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Compensaciones</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Sueldos</a>
+        <a href="https://app.powerbi.com/">Bonos</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Nóminas</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Pagos</a>
+        <a href="https://app.powerbi.com/">Recibos</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Gasto y Presupuesto</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/">Presupuesto</a>
+        <a href="https://app.powerbi.com/">Gasto</a>
+      </div>
+    </div>
+    <div class="sidebar-item">
+      <button class="sidebar-title">Relaciones Laborales</button>
+      <div class="sidebar-submenu">
+        <a href="https://app.powerbi.com/groups/782807d2-f9e0-42b3-830d-946f7891de99/reports/102e7e37-41e9-4111-9926-b07c16e9ee00/9370460b9458ee3128d7?language=es-ES&experience=power-bi">Dashboard</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="carousel" id="carousel">
+      <img src="./assets/img/cultura.jpg" class="active" alt="Recursos Humanos 1">
+      <img src="./assets/img/gente.jpg" alt="Recursos Humanos 2">
+      <img src="https://images.pexels.com/photos/1181351/pexels-photo-1181351.jpeg" alt="Recursos Humanos 3">
+    </div>
+  </main>
+
+  <script>
+    // Carrusel automático
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#carousel img');
+
+    setInterval(() => {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }, 5000);
+
+    // Desplegar submenús barra lateral
+    document.querySelectorAll('.sidebar-title').forEach(button => {
+      button.addEventListener('click', () => {
+        const submenu = button.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
